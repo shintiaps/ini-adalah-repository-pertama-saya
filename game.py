@@ -1,9 +1,10 @@
 # Game Tebak Angka
-# Angka rahasia adalah 2008
 
 angka_rahasia = 2008
 max_tebakan = 10
 percobaan = 0
+
+print("Clue kecil: Angka rahasia adalah angka 4 digit!")
 
 while percobaan < max_tebakan:
     try:
@@ -15,12 +16,12 @@ while percobaan < max_tebakan:
     percobaan += 1
 
     if tebakan == angka_rahasia:
-        print(f"Selamat! Tebakan Anda benar! 😊 Anda berhasil dalam {percobaan} percobaan.")
+        print(f"Selamat! Tebakan Anda benar! 😊 Anda berhasil dalam {percobaan} percobaan.\n         \\(^_^)/\n            |\n           / \\\n  🎉 YOU WIN! 🎉")
         break
     elif tebakan < angka_rahasia:
-        print("Tebakan terlalu kecil! 😢")
+        print("Tebakan terlalu kecil! \n   (T_T)\n   /|\\\n   / \\")
     else:
-        print("Tebakan terlalu besar! 😢")
+        print("Tebakan terlalu besar! \n   (T_T)\n   /|\\\n   / \\")
 
 else:
-    print("Game over! Anda telah mencapai batas maksimal percobaan. 😢")
+    print("Game over! Anda telah mencapai batas maksimal percobaan.\n   (T_T)\n   /|\\\n   / \\")
