@@ -1,13 +1,26 @@
-# Aplikasi game secreat number
+# Game Tebak Angka
+# Angka rahasia adalah 2008
 
-secreat_number = 777
+angka_rahasia = 2008
+max_tebakan = 10
+percobaan = 0
 
-guess_number = int(input("Masukkan Tebak Angka:"))
+while percobaan < max_tebakan:
+    try:
+        tebakan = int(input(f"Percobaan {percobaan+1}/{max_tebakan}: Masukkan tebakan angka: "))
+    except ValueError:
+        print("Masukkan angka yang valid! 😢")
+        continue
 
-while guess_number != secreat_number:
-    print("Tebakan Salah, Silakan Coba Lagi")
-    print("Anda terjebak dalam perputaran abadi") #modify
-    guess_number = int(input("Masukkan Tebakan Angka"))
+    percobaan += 1
 
-print("Selamat..!!, Tebakan anda benar!!")
-print("Kode ini saya buat di codespace")
+    if tebakan == angka_rahasia:
+        print(f"Selamat! Tebakan Anda benar! 😊 Anda berhasil dalam {percobaan} percobaan.")
+        break
+    elif tebakan < angka_rahasia:
+        print("Tebakan terlalu kecil! 😢")
+    else:
+        print("Tebakan terlalu besar! 😢")
+
+else:
+    print("Game over! Anda telah mencapai batas maksimal percobaan. 😢")
